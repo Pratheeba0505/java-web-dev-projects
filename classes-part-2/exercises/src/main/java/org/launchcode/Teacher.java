@@ -22,10 +22,12 @@ public class Teacher {
     }
 
     public void setSubject(String subject) {
+
         this.subject = subject;
     }
 
-    public void setYearsTeaching(int yearsTeaching) {
+    public void setYearsTeaching(int yearsTeaching)
+    {
         this.yearsTeaching = yearsTeaching;
     }
 

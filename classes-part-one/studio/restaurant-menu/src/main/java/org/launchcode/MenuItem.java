@@ -44,14 +44,43 @@ public class MenuItem {
         this.category = category;
     }
 
-    public LocalDate getDateAdded() {
+    public LocalDate getDateAdded()
+    {
         return dateAdded;
     }
 
 
+    @Override
+    public  String toString(){
+        String newText = isNew() ? " - NEW!" : "";
+        return name + newText + "\n" + description +" | $" + price;
+    }
+
+    @Override
+    public boolean equals(Object toBeCompared){
+        if(this == toBeCompared){
+            return true;
+        }
+        if(toBeCompared == null){
+            return false;
+        }
+        if(getClass() == toBeCompared.getClass()){
+            return false;
+        }
+        MenuItem otherItem = (MenuItem) toBeCompared;
+        return this.name.equals(otherItem.getName());
+    }
 
 
-
-
+    boolean isNew(){
+        LocalDate today = LocalDate.now();
+        double daysBetween = getDateAdded().until(today, ChronoUnit.DAYS);
+        return daysBetween < 90;
+    }
 
 }
+
+
+
+
+
