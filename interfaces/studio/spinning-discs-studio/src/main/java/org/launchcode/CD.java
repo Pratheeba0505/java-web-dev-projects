@@ -5,7 +5,7 @@ public class CD extends Media {
 
 
     public CD(String name, boolean isMusicCD) {
-        super(name, discType:"", spinRate:"800", capacity:"700");
+        super(name, discType :"", spinRate:"800", capacity:"700");
         this.isMusicCD = isMusicCD;
         setDiscType(isMusicCD ? "music CD" : "CD-RW");
     }
