@@ -1,6 +1,6 @@
 package org.launchcode;
-import java.util.ArrayList;
-public abstract class Media extends BaseDisc{
+
+public   abstract class Media extends BaseDisc {
     private double capacity;
     private final ArrayList<File> files = new ArrayList<>();
 
@@ -65,4 +65,5 @@ public abstract class Media extends BaseDisc{
         }
         return total;
     }
+}
 }

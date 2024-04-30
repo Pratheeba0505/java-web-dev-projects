@@ -1,8 +1,9 @@
 package org.launchcode;
 
-public interface Rewritable {
+public class Rewritable {
     void Write(File file);
     void removeFile(File file);
     void reformatDisc();
     void runFile(File file);
+}
 }
